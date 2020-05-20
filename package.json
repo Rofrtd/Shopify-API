@@ -1,0 +1,17 @@
+{
+  "name": "shopifyapi",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "src/*"
+  ],
+  "repository": "https://github.com/Rofrtd/Shopify-API.git",
+  "author": "Romulo Furtado <romulo.furtado@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^14.0.4",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.3"
+  }
+}
