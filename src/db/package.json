@@ -1,0 +1,8 @@
+{
+    "name": "@shopify-api/db",
+    "version": "0.0.0-local",
+    "private": true,
+    "dependencies": {
+        "@shopify-api/core": "0.0.0-local"
+    }
+}
