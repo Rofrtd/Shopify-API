@@ -12,9 +12,9 @@
   "author": "Romulo Furtado <romulo.furtado@hotmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@shopify-api/core": "0.0.0-local",
     "@shopify-api/db": "0.0.0-local",
-    "@shopify-api/web": "0.0.0-local"
+    "@shopify-api/web": "0.0.0-local",
+    "@shopify-api/schemas": "0.0.0-local"
   },
   "devDependencies": {
     "@types/node": "^14.0.4",

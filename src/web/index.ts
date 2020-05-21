@@ -1,28 +1,16 @@
-import { Core } from "@shopify-api/core";
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
-import { Request, Response, Application } from 'express'
+import { Application } from 'express'
+import ProductAPI from './ProductAPI'
 
 export class Web {
     private server: Application;
-    constructor(private core: Core) {
+    constructor() {
         this.server = express();
         this.server.use(bodyParser.json());
         this.server.use(bodyParser.urlencoded({ extended: true }));
-        const PREFIX = "/api/v1"
 
-
-        this.server.get(`${PREFIX}/product/list`, (req: Request, res: Response) => {
-            return res.send(this.core.getAllProducts());
-        });
-
-        this.server.get(`${PREFIX}/product/:id`,
-            (req: Request, res: Response) => {
-                const { id } = req.params
-                console.log(typeof (id))
-                res.send(this.core.getProductById(id));
-            }
-        );
+        ProductAPI.add(this.server)
     }
 
     async start(port: number) {
