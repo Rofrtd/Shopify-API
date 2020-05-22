@@ -1,5 +1,6 @@
 import { Product, ProductRequest } from "../schemas/Product";
 import * as fs from "fs";
+import { sortAndDeduplicateDiagnostics } from "typescript";
 
 export default class ProductDAO {
     public getAllProducts(): Product[] {
@@ -21,4 +22,10 @@ export default class ProductDAO {
 
         fs.writeFileSync("./local_storage/products.json", JSON.stringify(products))
     }
+
+    public deleteProduct(id: string) {
+        const products = JSON.parse(fs.readFileSync("./local_storage/products.json").toString()) as Product[];
+        fs.writeFileSync("./local_storage/products.json", JSON.stringify(products.filter(item => item.id != id)))
+    }
 }
+
