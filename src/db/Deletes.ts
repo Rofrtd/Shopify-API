@@ -1,4 +1,4 @@
-import ProductDAO from "./ProductDAO";
+import ProductDAO from "@shopify-api/db/ProductDAO";
 
 export default class Deletes {
 

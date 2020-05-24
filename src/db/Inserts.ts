@@ -1,5 +1,5 @@
-import ProductDAO from "./ProductDAO";
-import { ProductRequest } from "../schemas/Product";
+import ProductDAO from "@shopify-api/db/ProductDAO";
+import { ProductRequest } from "@shopify-api/schemas/Product";
 
 export default class Inserts {
     private productDAO: ProductDAO

@@ -1,7 +1,7 @@
-import Queries from "./Queries"
-import Inserts from "./Inserts"
-import Deletes from "./Deletes"
-import Updates from "./Updates"
+import Queries from "@shopify-api/db/Queries"
+import Inserts from "@shopify-api/db/Inserts"
+import Deletes from "@shopify-api/db/Deletes"
+import Updates from "@shopify-api/db/Updates"
 
 const getQueries = () => new Queries()
 const getInserts = () => new Inserts()
